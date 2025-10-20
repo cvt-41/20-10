@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Georgia', serif;
+background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 50%, #e1bee7 100%);
+min-height: 100%;
+overflow-x: hidden;
+}
+
+html {
+height: 100%;
+}
+
+
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 1rem;
+}
+
+.quote-section {
+position: relative;
+bottom: 20px;
+background: rgba(255, 255, 255);
+border-radius: 25px;
+padding: 3rem;
+text-align: center;
+margin: 3rem 0;
+box-shadow: 0 10px 30px rgba(173, 20, 87, 0.2);
+animation: fadeIn 1.5s ease-out;
+font-family: "Dancing Script";
+}
+
+.spacer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.quote-section img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 2px 2px #000;
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+}
+
+.iframe-c {
+    max-width: 500px;
+    height: auto;
+    overflow: hidden; 
+    position: relative;
+    right: 5px;
+}
+
+.iframe-c iframe {
+    position: relative;
+    bottom: auto;
+    height: 300px;
+}
+
+.flowers {
+    max-width: 50%;
+    height: auto;
+    transform: scale(1.5);
+    margin: 30px;
+    background: transparent;
+    flex: 1;
+    min-width: 300px;
+}
+
+.quote-text {
+font-size: 30px;
+color: #ad1457;
+font-weight: bold;
+line-height: 1.4;
+}
+
+.quote-author {
+font-size: 2rem;
+color: #186dc2;
+font-weight: bold;
+padding-bottom: 2vh;
+}
+
+.flowers {
+    position: relative;
+    right: 20px;
+}
+
+.floating-hearts {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: -1;
+}
+
+.heart {
+position: absolute;
+color: #f48fb1;
+font-size: 1.5rem;
+animation: float 6s ease-in-out infinite;
+opacity: 0.7;
+}
+
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 20%; animation-delay: 1s; }
+.heart:nth-child(3) { left: 30%; animation-delay: 2s; }
+.heart:nth-child(4) { left: 40%; animation-delay: 3s; }
+.heart:nth-child(5) { left: 50%; animation-delay: 4s; }
+.heart:nth-child(6) { left: 60%; animation-delay: 5s; }
+.heart:nth-child(7) { left: 70%; animation-delay: 0.5s; }
+.heart:nth-child(8) { left: 80%; animation-delay: 1.5s; }
+.heart:nth-child(9) { left: 90%; animation-delay: 2.5s; }
+
+.celebration-button {
+background: linear-gradient(45deg, #e91e63, #ad1457);
+color: white;
+border: none;
+padding: 1rem 2rem;
+font-size: 1.2rem;
+border-radius: 50px;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 4px 15px rgba(173, 20, 87, 0.3);
+margin: 1rem;
+font-family: inherit;
+}
+
+.celebration-button:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 25px rgba(173, 20, 87, 0.4);
+background: linear-gradient(45deg, #ad1457, #880e4f);
+}
+
+.footer {
+display: flex;
+justify-content: center;
+vertical-align: auto;
+text-align: center;
+color: #ad1457;
+font-size: 1.1rem;
+}
+.footer p {
+position: relative;
+top: 5px;
+}
+
+@keyframes fadeInDown {
+from {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes fadeInUp {
+from {
+    opacity: 0;
+    transform: translateY(50px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes fadeIn {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+@keyframes float {
+0%, 100% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+}
+10%, 90% {
+    opacity: 0.7;
+}
+50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 1;
+}
+}
+
+@media (max-width: 768px) {
+.main-title {
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+}
+
+.quote-text {
+    font-size: 1.4rem;
+}
+
+.container {
+    padding: 1rem;
+}
+.quote-section {
+    flex-direction: column;
+}
+.flowers {
+    max-width: 80%;
+    margin: 15px auto;
+}
+.quote-section img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+}
